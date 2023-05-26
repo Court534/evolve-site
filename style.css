@@ -121,9 +121,10 @@ header {
   display: none;
 }
 
-/* Dropdown Menu  */
+/* Dropdown Menu */
 .dropdown-menu {
   display: none;
+  height: 0;
   position: absolute;
   right: 2rem;
   top: 60px;
@@ -132,6 +133,12 @@ header {
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropdown-menu.open {
+  height: 185px;
+
 }
 
 .dropdown-menu li {
