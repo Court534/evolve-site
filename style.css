@@ -12,6 +12,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   background-color: black;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Make images easier to work with */
@@ -83,7 +84,6 @@ a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
 }
 
 a:hover {
@@ -106,7 +106,6 @@ header {
   justify-content: space-between;
   font-size: 1.5rem;
   font-weight: bold;
-  
 }
 
 .navbar .links {
@@ -115,7 +114,7 @@ header {
 }
 
 .navbar .toggle-btn {
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -128,7 +127,7 @@ header {
   position: absolute;
   right: 2rem;
   top: 60px;
-  width: 300px; 
+  width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -138,20 +137,35 @@ header {
 
 .dropdown-menu.open {
   height: 185px;
-
 }
 
 .dropdown-menu li {
-  padding: 0.7rem;  
+  padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Hero */
+#hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: gray;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
 /* Responsive Design */
-@media(max-width: 992px){
+@media (max-width: 992px) {
   .navbar .links,
-   .navbar .action-btn {
+  .navbar .action-btn {
     display: none;
   }
 
@@ -161,5 +175,12 @@ header {
 
   .dropdown-menu {
     display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
   }
 }
